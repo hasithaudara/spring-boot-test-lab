@@ -1,10 +1,9 @@
 package com.practice.spring.SpringBootPracticeLab.controller;
 
-import com.practice.spring.SpringBootPracticeLab.dtos.UserDTO;
+import com.practice.spring.SpringBootPracticeLab.dto.UserDTO;
 import com.practice.spring.SpringBootPracticeLab.service.UserService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

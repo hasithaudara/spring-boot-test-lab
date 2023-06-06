@@ -1,4 +1,4 @@
-package com.practice.spring.SpringBootPracticeLab.dtos;
+package com.practice.spring.SpringBootPracticeLab.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

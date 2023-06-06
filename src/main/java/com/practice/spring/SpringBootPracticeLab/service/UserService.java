@@ -1,7 +1,6 @@
 package com.practice.spring.SpringBootPracticeLab.service;
 
-import com.practice.spring.SpringBootPracticeLab.dtos.UserDTO;
-import com.practice.spring.SpringBootPracticeLab.entity.User;
+import com.practice.spring.SpringBootPracticeLab.dto.UserDTO;
 
 import java.util.List;
 

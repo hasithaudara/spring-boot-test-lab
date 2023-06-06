@@ -36,6 +36,7 @@ mvn clean package
 docker build -t ${image_name} .
 # Run the new Docker container
 echo ${SPRING_DATASOURCE_URL}
-docker run --name ${container_name} -d -p ${docker_external_port}:${spring_server_port} -e SPRING_PROFILES_ACTIVE=${spring_profile_name} -e SERVER_PORT=${spring_server_port} -e SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL} -e SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME} -e SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD} ${image_name}
+
+docker run --name ${container_name} -d -p ${docker_external_port}:${spring_server_port} --network=spring-postgre-network -e SPRING_PROFILES_ACTIVE=${spring_profile_name} -e SERVER_PORT=${spring_server_port} -e SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL} -e SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME} -e SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD} -e ENV_NAME=qa ${image_name}
 
 echo "Completed..."
